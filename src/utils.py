@@ -178,7 +178,7 @@ def get_weigAv_prob_rank(df_pred, target='onrent', n_bins=20):
     # print(prob_mass_in_ranges)
     print('prob. mass covered: ', prob_mass_in_ranges.sum())
     weigAv_prob_rank = (prob_mass_in_ranges * (np.arange(len(prob_mass_in_ranges))+1)).sum()
-    return df_pred, prob_mass_in_ranges, weigAv_prob_rank
+    return weigAv_prob_rank
 
 ##### Rank based metric: Weighted average predicted HDI interval rank
 def get_hdi_range(posterior_predictive_obs, hdi_prob, scaler):
